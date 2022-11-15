@@ -9,21 +9,11 @@
         <div class="relative flex gap-2 items-center">
           <NavbarBrand />
           <div class="relative flex lg:flex items-center ml-auto">
-            <!-- <NavbarItems /> -->
-            <!-- <div
-              class="flex items-center border-l border-slate-200pl-2 dark:border-slate-800"
-            >
-              <NavbarActionButtons name="notification">
-                <i class="fa fa-bell h-5 w-5"></i>
-              </NavbarActionButtons>
-            </div> -->
             <div
               class="flex gap-2 items-center border-slate-200 pl-2 dark:border-slate-800"
             >
               <NavbarSearch />
-              <NavbarActionButtons name="notification">
-                <i class="fa fa-bell h-5 w-5"></i>
-              </NavbarActionButtons>
+              <Notification />
               <NavbarToggleDark />
             </div>
           </div>
@@ -45,6 +35,7 @@ import NavbarActionButtons from "./Navbar-ActionButtons.vue";
 import NavbarToggleDark from "./Navbar-ToggleDark.vue";
 import NavbarMobileMenu from "./Navbar-MobileMenu.vue";
 import NavbarSearch from "./Navbar-Search.vue";
+import Notification from "../notification/Notification.vue";
 </script>
 
 <style lang="scss" scoped></style>
