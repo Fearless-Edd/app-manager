@@ -1,92 +1,67 @@
 <template>
-
-    <div
-      class="2xl:w-4/12 dark:bg-slate-800 bg-gray-50 h-screen overflow-y-auto p-8 absolute right-0"
-    >
-      <span
-        tabindex="0"
-        class="focus:outline-none text-sm block leading-normal pt-0 border-b pb-2 border-gray-300 dark:text-gray-50 text-gray-600"
+  <div
+    class="bg-white px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear"
+  >
+    <div class="w-full flex items-center justify-between">
+      <span class="font-medium text-sm text-slate-400">New Notification</span>
+      <button
+        class="-mr-1 bg-slate-100 hover:bg-slate-200 text-slate-400 hover:text-slate-600 h-5 w-5 rounded-full flex justify-center items-center"
       >
-        Unread
-      </span>
-      <div class="w-full mt-6 p-3 bg-white rounded shadow flex">
-        <div
-          tabindex="0"
-          aria-label="heart icon"
-          role="img"
-          class="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.00059 3.01934C9.56659 1.61334 11.9866 1.66 13.4953 3.17134C15.0033 4.68334 15.0553 7.09133 13.6526 8.662L7.99926 14.3233L2.34726 8.662C0.944589 7.09133 0.997256 4.67934 2.50459 3.17134C4.01459 1.662 6.42992 1.61134 8.00059 3.01934Z"
-              fill="#EF4444"
-            />
-          </svg>
-        </div>
-        <div class="pl-3">
-          <p tabindex="0" class="focus:outline-none text-sm leading-none">
-            <span class="text-indigo-700">James Doe</span> favourited an
-            <span class="text-indigo-700">item</span>
-          </p>
-          <p
-            tabindex="0"
-            class="focus:outline-none text-xs leading-3 pt-1 text-gray-500"
-          >
-            2 hours ago
-          </p>
-        </div>
-      </div>
-      <!-- Replace with your content -->
-      <span
-        tabindex="0"
-        class="focus:outline-none text-sm block leading-normal pt-8 border-b pb-2 border-gray-300 dark:text-gray-50 text-gray-600"
-      >
-        Read
-      </span>
-      <div class="w-full mt-6 p-3 bg-white rounded shadow flex">
-        <div
-          tabindex="0"
-          aria-label="heart icon"
-          role="img"
-          class="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.00059 3.01934C9.56659 1.61334 11.9866 1.66 13.4953 3.17134C15.0033 4.68334 15.0553 7.09133 13.6526 8.662L7.99926 14.3233L2.34726 8.662C0.944589 7.09133 0.997256 4.67934 2.50459 3.17134C4.01459 1.662 6.42992 1.61134 8.00059 3.01934Z"
-              fill="#EF4444"
-            />
-          </svg>
-        </div>
-        <div class="pl-3">
-          <p tabindex="0" class="focus:outline-none text-sm leading-none">
-            <span class="text-indigo-700">James Doe</span> favourited an
-            <span class="text-indigo-700">item</span>
-          </p>
-          <p
-            tabindex="0"
-            class="focus:outline-none text-xs leading-3 pt-1 text-gray-500"
-          >
-            2 hours ago
-          </p>
-        </div>
-      </div>
-      <!-- /End replace -->
+        <svg class="h-2 w-2 fill-current items-center" viewBox="0 0 20 20">
+          <path
+            d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"
+          />
+        </svg>
+      </button>
     </div>
+    <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
+      <div class="relative flex flex-shrink-0 items-end">
+        <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300" />
+        <span
+          class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"
+        ></span>
+      </div>
+      <div class="ml-3">
+        <span class="font-semibold tracking-tight text-xs">John Doe </span>
+        <span class="text-xs leading-none opacity-50"
+          >created a new PPM Schedule</span
+        >
+        <p class="text-xs leading-4 pt-2 italic opacity-70">
+          "Assigned to ..."
+        </p>
+        <span class="text-[10px] text-blue-500 font-medium leading-4 opacity-75"
+          >a few seconds ago</span
+        >
+      </div>
+    </div>
+  </div>
 
+  <!-- <span
+    tabindex="0"
+    class="focus:outline-none text-sm block leading-normal pb-2 border-gray-300 dark:text-gray-50 text-gray-600"
+  >
+    Unread
+  </span>
+  <div class="mt-6 p-3 bg-white rounded shadow flex">
+    <div>
+      <p tabindex="0" class="focus:outline-none text-sm leading-none">
+        <span class="text-indigo-700">James Doe</span> favourited an
+        <span class="text-indigo-700">item with model number 12234</span>
+      </p>
+      <p
+        tabindex="0"
+        class="focus:outline-none text-xs leading-3 pt-1 text-gray-500"
+      >
+        2 hours ago
+      </p>
+    </div>
+  </div> -->
 </template>
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+li {
+  list-style: none;
+}
+</style>
