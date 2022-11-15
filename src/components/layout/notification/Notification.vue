@@ -8,78 +8,63 @@
 
     <i class="fa fa-bell"></i>
   </button>
-  <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-50" @close="open = false">
+
+  <TransitionRoot appear as="template" :show="open">
+    <Dialog class="overflow-y-auto fixed inset-0 z-50" @close="open = false">
       <TransitionChild
-        as="template"
-        enter="ease-in-out duration-500"
+        enter="transition-opacity ease-in-out duration-300"
         enter-from="opacity-0"
         enter-to="opacity-100"
-        leave="ease-in-out duration-500"
+        leave="transition-opacity ease-in-out duration-300"
         leave-from="opacity-100"
         leave-to="opacity-0"
+        as="template"
       >
-        <div
-          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        <DialogOverlay
+          class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
         />
       </TransitionChild>
 
-      <div class="fixed inset-0 overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden">
-          <div
-            class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
-          >
-            <TransitionChild
-              as="template"
-              enter="transform transition ease-in-out duration-500 sm:duration-700"
-              enter-from="translate-x-full"
-              enter-to="translate-x-0"
-              leave="transform transition ease-in-out duration-500 sm:duration-700"
-              leave-from="translate-x-0"
-              leave-to="translate-x-full"
+      <TransitionChild
+        enter="transition  ease-in-out transform  duration-300"
+        enter-from="translate-x-full"
+        enter-to="translate-x-0"
+        leave="transition  ease-in-out transform  duration-300"
+        leave-from="translate-x-0"
+        leave-to="translate-x-full"
+        as="template"
+      >
+        <div class="flex fixed inset-y-0 right-0 max-w-full">
+          <div class="bg-white w-80 max-w-full dark:bg-slate-800">
+            <button
+              @click="open = false"
+              type="button"
+              class="absolute z-10 top-5 right-4 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+              tabindex="0"
             >
-              <DialogPanel
-                class="pointer-events-auto relative w-screen max-w-md"
-              >
-                <TransitionChild
-                  as="template"
-                  enter="ease-in-out duration-500"
-                  enter-from="opacity-0"
-                  enter-to="opacity-100"
-                  leave="ease-in-out duration-500"
-                  leave-from="opacity-100"
-                  leave-to="opacity-0"
+              <span class="sr-only">Close navigation</span>
+              <XMarkIcon class="w-6 h-6 overflow-visible" />
+            </button>
+            <div
+              class="h-full flex-col overflow-y-scroll bg-white dark:bg-slate-800 py-6 shadow-lg"
+            >
+              <div class="px-4 sm:px-6">
+                <DialogTitle
+                  class="text-lg font-medium text-gray-900 dark:text-gray-50"
+                  >Notifications</DialogTitle
                 >
-                  <div
-                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
-                  >
-                    <button
-                      type="button"
-                      class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                      @click="open = false"
-                    >
-                      <span class="sr-only">Title</span>
-                      <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-                </TransitionChild>
-                <div
-                  class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl"
-                >
-                  <div class="px-4 sm:px-6">
-                    <DialogTitle class="text-lg font-medium text-gray-900"
-                      >Notifications</DialogTitle
-                    >
-                  </div>
-                  <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                    <NotificationItems />
-                  </div>
+              </div>
+              <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                <!-- Replace with your content -->
+                <div class="sm:px-6">
+                  <NotificationItems />
                 </div>
-              </DialogPanel>
-            </TransitionChild>
+                <!-- /End replace -->
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </TransitionChild>
     </Dialog>
   </TransitionRoot>
 </template>
