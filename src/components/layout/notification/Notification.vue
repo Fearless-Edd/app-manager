@@ -10,7 +10,7 @@
   </button>
 
   <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-50 lg:hidden" @close="open = false">
+    <Dialog as="div" class="relative z-50" @close="open = false">
       <TransitionChild
         as="template"
         enter="ease-in-out duration-500"

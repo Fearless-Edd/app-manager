@@ -3,7 +3,7 @@
     @click="isOpen = true"
     v-bind="$attrs"
     type="button"
-    class="ml-auto w-8 h-8 -my-1 items-center justify-center block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+    class="ml-auto w-8 h-8 -my-1 items-center justify-center lg:hidden block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
   >
     <span class="sr-only">Search</span>
     <MagnifyingGlassIcon class="w-5 h-5" />

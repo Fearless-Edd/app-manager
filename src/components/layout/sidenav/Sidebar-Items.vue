@@ -3,15 +3,26 @@
     <button
       type="button"
       class="break-inside rounded-xl dark:hover:bg-gray-600 hover:bg-gray-100 p-2 mb-4 w-full"
+      @click="changePage('dashboard')"
     >
       <div class="flex items-center space-x-4">
-      <i class="fa fa-dashboard text-3xl text-gray-600 dark:text-gray-300"></i>
-        <span class="text-base font-medium text-gray-600 dark:text-gray-300">Dashboard</span>
+        <i
+          class="fa fa-dashboard text-3xl text-gray-600 dark:text-gray-300"
+        ></i>
+        <span class="text-base font-medium text-gray-600 dark:text-gray-300"
+          >Dashboard</span
+        >
       </div>
     </button>
   </li>
 </template>
 
-<script setup></script>
+<script setup>
+const emit = defineEmits(["updatePage"]);
+
+const changePage = async (page) => {
+  emit("updatePage", page);
+}
+</script>
 
 <style lang="scss" scoped></style>
