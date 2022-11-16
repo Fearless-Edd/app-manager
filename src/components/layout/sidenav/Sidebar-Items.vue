@@ -1,29 +1,14 @@
 <template>
-  <li>
-    <a
-      href="#"
-      class="flex items-center p-2 text-base font-normal text-slate-800 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+  <li class="py-3 sm:py-4">
+    <button
+      type="button"
+      class="break-inside rounded-xl dark:hover:bg-gray-600 hover:bg-gray-100 p-2 mb-4 w-full"
     >
-      <i class="fa fa-dashboard h-4 w-4"></i>
-      <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
-      <span
-        class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"
-        >Pro</span
-      >
-    </a>
-  </li>
-  <li>
-    <a
-      href="#"
-      class="flex items-center p-2 text-base font-normal text-slate-800 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-    >
-      <i class="fa fa-dashboard h-4 w-4"></i>
-      <span class="flex-1 ml-3 whitespace-nowrap">Maintenance Calculator</span>
-      <!-- <span
-        class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"
-        >Pro</span
-      > -->
-    </a>
+      <div class="flex items-center space-x-4">
+      <i class="fa fa-dashboard text-3xl text-gray-600 dark:text-gray-300"></i>
+        <span class="text-base font-medium text-gray-600 dark:text-gray-300">Dashboard</span>
+      </div>
+    </button>
   </li>
 </template>
 

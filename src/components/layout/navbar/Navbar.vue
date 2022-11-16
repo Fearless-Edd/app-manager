@@ -23,6 +23,14 @@
           </div>
         </div>
       </div>
+      <div
+        class="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]"
+      >
+        <SidenavOverlay />
+        <ol class="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0">
+          <li class="flex items-center">Menu</li>
+        </ol>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +44,7 @@ import NavbarToggleDark from "./Navbar-ToggleDark.vue";
 import NavbarMobileMenu from "./Navbar-MobileMenu.vue";
 import NavbarSearch from "./Navbar-Search.vue";
 import Notification from "../notification/Notification.vue";
+import SidenavOverlay from "../sidenav/Sidenav-Overlay.vue";
 </script>
 
 <style lang="scss" scoped></style>

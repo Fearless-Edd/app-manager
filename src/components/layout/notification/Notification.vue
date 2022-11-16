@@ -10,7 +10,7 @@
   </button>
 
   <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-50" @close="open = false">
+    <Dialog as="div" class="relative z-50 lg:hidden" @close="open = false">
       <TransitionChild
         as="template"
         enter="ease-in-out duration-500"
@@ -21,7 +21,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
         />
       </TransitionChild>
 
@@ -40,7 +40,7 @@
               leave-to="translate-x-full"
             >
               <DialogPanel
-                class="pointer-events-auto relative w-screen max-w-md"
+                class="pointer-events-auto relative w-screen max-w-sm"
               >
                 <TransitionChild
                   as="template"
@@ -75,10 +75,8 @@
                   <div class="relative mt-6 flex-1 px-4 sm:px-6">
                     <!-- Replace with your content -->
                     <div class="absolute inset-0 px-4 sm:px-6">
-                      <div
-                        class="h-full"
-                      >
-                      <NotificationItems />
+                      <div class="h-full">
+                        <NotificationItems />
                       </div>
                     </div>
                     <!-- /End replace -->
