@@ -1,7 +1,12 @@
 <template>
-  <div>My Dashboard</div>
+  <LayoutHeader
+    pageTitle="Dashboard"
+    subTitle="Summary of all your accessible applications"
+  />
 </template>
 
-<script setup></script>
+<script setup>
+import LayoutHeader from "../../layout/Layout-Header.vue";
+</script>
 
 <style scoped></style>
