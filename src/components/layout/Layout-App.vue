@@ -1,18 +1,13 @@
 <template>
-  <component :is="currentPage"></component>
+  <keep-alive>
+    <component :is="store.currentPage" />
+  </keep-alive>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import Dashboard from "../pages/dashboard/Dashboard.vue";
+import { usePageUpdateStore } from "../../stores/pageUpdate";
 
-const currentPage = ref("Dashboard");
-
-// function changePage(){
-//       if(currentPage.value === "Dashborad"){
-//             currentPage.value = Dashborad
-//       }
-// }
+const store = usePageUpdateStore();
 </script>
 
 <style lang="scss" scoped></style>

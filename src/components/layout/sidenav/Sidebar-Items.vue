@@ -1,28 +1,26 @@
 <template>
-  <li class="py-3 sm:py-4">
-    <button
-      type="button"
-      class="break-inside rounded-xl dark:hover:bg-gray-600 hover:bg-gray-100 p-2 mb-4 w-full"
-      @click="changePage('dashboard')"
+  <li>
+    <SideNavButtons pageName="Dashboard" @click="store.currentPage = Dashboard">
+      <i class="fa fa-dashboard text-2xl text-gray-600 dark:text-gray-300"></i>
+    </SideNavButtons>
+  </li>
+  <li>
+    <SideNavButtons
+      pageName="Maintenance"
+      @click="store.currentPage = Maintenance"
     >
-      <div class="flex items-center space-x-4">
-        <i
-          class="fa fa-dashboard text-3xl text-gray-600 dark:text-gray-300"
-        ></i>
-        <span class="text-base font-medium text-gray-600 dark:text-gray-300"
-          >Dashboard</span
-        >
-      </div>
-    </button>
+      <i class="fa fa-dashboard text-2xl text-gray-600 dark:text-gray-300"></i>
+    </SideNavButtons>
   </li>
 </template>
 
 <script setup>
-const emit = defineEmits(["updatePage"]);
+import { usePageUpdateStore } from "../../../stores/pageUpdate";
+import SideNavButtons from "../../layout/global/SideNavButtons.vue";
+import Dashboard from "../../pages/dashboard/Dashboard.vue";
+import Maintenance from "../../pages/maintenance/Maintenance.vue";
 
-const changePage = async (page) => {
-  emit("updatePage", page);
-}
+const store = usePageUpdateStore();
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,13 +1,7 @@
 <template>
-  <div>
-    <h1>Dashboard</h1>
-  </div>
+  <div>My Dashboard</div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
