@@ -13,6 +13,7 @@
               class="flex gap-2 items-center border-slate-200 pl-2 dark:border-slate-800"
             >
               <NavbarSearch />
+              <NavbarCreateNew />
               <Notification />
               <NavbarToggleDark />
             </div>
@@ -27,7 +28,7 @@
         class="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]"
       >
         <SidenavOverlay />
-        <ol class="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0">
+        <ol class="ml-2 font-medium flex text-sm leading-6 whitespace-nowrap min-w-0">
           <li class="flex items-center">Menu</li>
         </ol>
       </div>
@@ -45,6 +46,7 @@ import NavbarMobileMenu from "./Navbar-MobileMenu.vue";
 import NavbarSearch from "./Navbar-Search.vue";
 import Notification from "../notification/Notification.vue";
 import SidenavOverlay from "../sidenav/Sidenav-Overlay.vue";
+import NavbarCreateNew from "./Navbar-CreateNew.vue"
 </script>
 
 <style lang="scss" scoped></style>

@@ -6,12 +6,8 @@
         type="button"
         class="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
       >
-        <span class="sr-only">Navigation</span>
-        <img
-          class="h-8 w-8 rounded-full"
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
+        <span class="sr-only">Create New</span>
+        <i class="fa fa-plus"></i>
       </button>
     </div>
     <TransitionRoot appear :show="isOpen" as="template">
@@ -65,24 +61,6 @@
                 >
               </li>
             </ul>
-
-            <div
-              class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10"
-            >
-              <div class="flex items-center justify-between">
-                <div
-                  class="relative flex items-center mx-auto pl-0 border-slate-300"
-                >
-                  <NavbarToggleDark />
-                  <NavbarActionButtons name="notification">
-                    <i class="fa fa-bell h-5 w-5"></i>
-                  </NavbarActionButtons>
-                  <NavbarActionButtons name="notification">
-                    <i class="fa fa-sign-out h-5 w-5"></i>
-                  </NavbarActionButtons>
-                </div>
-              </div>
-            </div>
           </div>
         </TransitionChild>
       </Dialog>
@@ -99,11 +77,12 @@ import {
   Dialog,
   DialogOverlay,
 } from "@headlessui/vue";
+import { XMarkIcon } from "@heroicons/vue/24/outline";
 
 const links = ref([
-  { name: "Profile", href: "#" },
-  { name: "Manage Account", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Create Maintenance Number", href: "#" },
+  { name: "Create PPM Schedule", href: "#" },
+  { name: "Coming Soon", href: "#" },
 ]);
 
 let isOpen = ref(false);

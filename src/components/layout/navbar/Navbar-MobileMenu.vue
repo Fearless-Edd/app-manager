@@ -10,15 +10,6 @@
       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
       alt=""
     />
-    <!-- <svg width="24" height="24" fill="none" aria-hidden="true">
-      <path
-        d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></path>
-    </svg> -->
   </button>
   <TransitionRoot appear :show="isOpen" as="template">
     <Dialog
@@ -76,15 +67,9 @@
             class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10"
           >
             <div class="flex items-center justify-between">
-              <!-- <label
-                for="theme"
-                class="text-slate-700 font-normal dark:text-slate-400"
-                >Switch theme</label
-              > -->
               <div
                 class="relative flex items-center mx-auto pl-0 border-slate-300"
               >
-                <!-- <NavbarToggleDark /> -->
                 <NavbarActionButtons name="notification">
                   <i class="fa fa-bell h-5 w-5"></i>
                 </NavbarActionButtons>
@@ -119,7 +104,6 @@ import {
   DialogOverlay,
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
-import NavbarToggleDark from "./Navbar-ToggleDark.vue";
 import NavbarActionButtons from "./Navbar-ActionButtons.vue";
 
 const links = ref([
