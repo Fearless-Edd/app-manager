@@ -8,16 +8,6 @@
           <div class="relative w-full px-4 max-w-full flex-grow flex-1">
             <h3 class="font-semibold text-lg">Equipment</h3>
           </div>
-          <div
-            class="relative w-full px-4 max-w-full flex-grow flex-1 text-right"
-          >
-            <button
-              class="bg-gray-500 dark:bg-gray-300 text-white dark:text-gray-800 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-              type="button"
-            >
-              New
-            </button>
-          </div>
         </div>
       </div>
       <div class="block w-full overflow-x-auto">
@@ -79,6 +69,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import MaintenanceForm from './MaintenanceForm.vue';
+</script>
 
 <style lang="scss" scoped></style>

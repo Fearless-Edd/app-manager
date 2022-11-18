@@ -2,9 +2,11 @@
   <LayoutHeader
     pageTitle="Maintenace Calculator"
     subTitle="Risk-based Biomedical Equipment Management Programme"
+    buttonName="New"
+    @click="store.currentPage = MaintenanceForm"
   />
   <div
-    class="relative mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-12"
+    class="relative mx-auto mt-8"
   >
     <SummaryCard />
   </div>
@@ -40,12 +42,16 @@
 </template>
 
 <script setup>
+import { usePageUpdateStore } from "../../../stores/pageUpdate";
 import LayoutHeader from "../../layout/Layout-Header.vue";
 import LayoutRightSidenav from "../../layout/Layout-RightSidenav.vue";
 import PageDialog from "../PageDialog.vue";
 import DataTable from "./DataTable.vue";
 import SummaryCard from "./SummaryCard.vue";
 import AdvertSection from './AdvertSection.vue';
+import MaintenanceForm from './MaintenanceForm.vue';
+
+const store = usePageUpdateStore()
 </script>
 
 <style lang="scss" scoped></style>
