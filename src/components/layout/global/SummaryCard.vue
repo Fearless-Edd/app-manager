@@ -47,7 +47,7 @@
 </template>
 
 <script setup>
-import MaintenanceDetail from "../maintenance/MaintenanceDetail.vue";
+import MaintenanceDetail from "../../pages/maintenance/MaintenanceDetail.vue";
 import { usePageUpdateStore } from "../../../stores/pageUpdate";
 
 const store = usePageUpdateStore();

@@ -47,7 +47,7 @@ import LayoutHeader from "../../layout/Layout-Header.vue";
 import LayoutRightSidenav from "../../layout/Layout-RightSidenav.vue";
 import PageDialog from "../PageDialog.vue";
 import DataTable from "./DataTable.vue";
-import SummaryCard from "./SummaryCard.vue";
+import SummaryCard from "../../layout/global/SummaryCard.vue";
 import AdvertSection from './AdvertSection.vue';
 import MaintenanceForm from './MaintenanceForm.vue';
 
