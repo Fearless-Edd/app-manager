@@ -3,11 +3,9 @@
     pageTitle="Maintenace Calculator"
     subTitle="Risk-based Biomedical Equipment Management Programme"
     buttonName="New"
-    @click="store.currentPage = MaintenanceForm"
+    @click="pageStore.currentPage = MaintenanceForm"
   />
-  <div
-    class="relative mx-auto mt-8"
-  >
+  <div class="relative mx-auto mt-8">
     <SummaryCard />
   </div>
   <DataTable />
@@ -37,8 +35,6 @@
     </li>
     <AdvertSection />
   </LayoutRightSidenav>
-  
-
 </template>
 
 <script setup>
@@ -48,10 +44,10 @@ import LayoutRightSidenav from "../../layout/Layout-RightSidenav.vue";
 import PageDialog from "../PageDialog.vue";
 import DataTable from "./DataTable.vue";
 import SummaryCard from "../../layout/global/SummaryCard.vue";
-import AdvertSection from './AdvertSection.vue';
-import MaintenanceForm from './MaintenanceForm.vue';
+import AdvertSection from "./AdvertSection.vue";
+import MaintenanceForm from "./MaintenanceForm.vue";
 
-const store = usePageUpdateStore()
+const pageStore = usePageUpdateStore();
 </script>
 
 <style lang="scss" scoped></style>

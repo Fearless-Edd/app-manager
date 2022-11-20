@@ -71,11 +71,8 @@
 </template>
 
 <script setup>
-import { PaperClipIcon } from "@heroicons/vue/20/solid";
-import { usePageUpdateStore } from "../../../stores/pageUpdate";
 import LayoutHeader from "../../layout/Layout-Header.vue";
 
-const store = usePageUpdateStore();
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,8 +1,4 @@
 <template>
-  <LayoutHeader
-    pageTitle="Equipment Category Form"
-    subTitle="Create category list with this form"
-  />
   <div class="relative shadow mx-auto mt-8">
     <div class="md:grid md:grid-cols-1 md:gap-6">
       <div class="mt-5 md:col-span-2 md:mt-0">
