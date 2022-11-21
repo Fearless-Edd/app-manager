@@ -1,4 +1,3 @@
-import { ref } from "vue";
 import { defineStore } from "pinia";
 import axios from "axios";
 
@@ -27,49 +26,22 @@ export const useEquipmentDictionaryStore = defineStore(
           console.log(error);
         }
       },
-      async addDictionaryList(umdns_code, umdns, common_name) {
-        try {
-          const response = await axios.post(api_url, {
-            dictionaryList: name,
-          });
-          this.categories = response.data;
-        } catch (error) {
-          console.log(error.message);
+      async addDictionaryList(data) {
+        const response = await axios.post(api_url, data);
+        if (response.data.success) {
+          alert(response.data.message);
         }
       },
-      async updateCategory(updatedCategory) {
-        try {
-          await axios.put(api_url + `/${updatedCategory.id}`, updatedCategory);
-          const index = this.categories.findIndex((c) => {
-            return c.id === updatedCategory.id;
-          });
-          if (index !== -1) {
-            this.categories.splice(index, 1, updatedCategory);
-          }
-        } catch (error) {
-          console.log(error.message);
-        }
-      },
-      async deleteCategory(id) {
+      async deleteDictionaryList(id) {
         try {
           await axios.delete(api_url + `/${id}`);
-          this.categories = this.categories.filter((c) => {
+          this.dictionaryLists = this.dictionaryLists.filter((c) => {
             return c.id !== id;
           });
         } catch (error) {
           console.log(error.message);
         }
       },
-
-      // addCategory(category) {
-      //   this.categories.push(category);
-      // },
-
-      // deleteCategory(id) {
-      //   this.categories = this.categories.filter((c) => {
-      //     return c.id !== id;
-      //   });
-      // },
     },
   }
 );

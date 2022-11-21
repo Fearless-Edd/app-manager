@@ -8,7 +8,7 @@
       <div class="mb-3 lg:mb-0">
         <h5 class="text-xl font-bold text-slate-900">{{ list.common_name }}</h5>
         <p class="mt-1 text-xs font-medium text-slate-600">
-          {{list.umdns_code}} - {{list.umdns}}
+          {{ list.umdns_code }} - {{ list.umdns }}
         </p>
       </div>
       <div class="flex gap-2">
@@ -20,7 +20,7 @@
         </button>
         <button
           class="-mr-1 bg-slate-100 hover:bg-slate-200 text-slate-400 hover:text-slate-600 h-5 w-5 rounded-full flex justify-center items-center"
-          @click=""
+          @click="deleteDictionaryList(list.id)"
         >
           <i class="fa-solid fa-xmark text-xs"></i>
         </button>
@@ -39,9 +39,9 @@ const getDictionaryLists = computed(() => {
   return equipmentDictionaryStore.getDictionaryLists;
 });
 
-// const deleteCategory = computed(() => {
-//   return categoryStore.deleteCategory;
-// });
+const deleteDictionaryList = computed(() => {
+  return equipmentDictionaryStore.deleteDictionaryList;
+});
 
 // const updateCategory = computed((currentCategory) => {
 //   const updatedCategory = {

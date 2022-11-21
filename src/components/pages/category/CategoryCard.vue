@@ -31,7 +31,7 @@
 
 <script setup>
 import { computed, onMounted } from "vue";
-import { useCategoryStore } from "../../../stores/category";
+import { useCategoryStore } from "../../../stores/categoryStore";
 
 const categoryStore = useCategoryStore();
 
@@ -43,19 +43,12 @@ const deleteCategory = computed(() => {
   return categoryStore.deleteCategory;
 });
 
-// const updateCategory = computed((currentCategory) => {
-//   const updatedCategory = {
-//     name: currentCategory.name,
-//   };
-//   return categoryStore.updateCategory(updatedCategory);
-// });
-
-// const updateCategory = (currentCategory) => {
-//   const updatedCategory = {
-//     name: currentCategory.name,
-//   };
-//   categoryStore.updateCategory(updatedCategory);
-// };
+const updateCategory = (currentCategory) => {
+  const updatedCategory = {
+    name: currentCategory.name,
+  };
+  categoryStore.updateCategory(updatedCategory);
+};
 
 onMounted(() => {
   categoryStore.fetchCategories();

@@ -45,8 +45,7 @@
 
 <script setup>
 import { ref } from "vue";
-import LayoutHeader from "../../layout/Layout-Header.vue";
-import { useCategoryStore } from "../../../stores/category";
+import { useCategoryStore } from "../../../stores/categoryStore";
 
 // Invoke Category Store
 const categoryStore = useCategoryStore();
@@ -56,10 +55,14 @@ const newCategory = ref("");
 // Handle Submit
 const onSubmit = () => {
   if (newCategory.value.length > 0) {
-    categoryStore.addCategory({ name: newCategory.value });
+    const data = {
+      name: newCategory.value,
+    };
     newCategory.value = "";
+    categoryStore.addCategory(data);
   }
 };
+
 </script>
 
 <style lang="scss" scoped></style>

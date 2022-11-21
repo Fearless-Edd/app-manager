@@ -8,15 +8,15 @@
               <div class="grid grid-cols-6 gap-6 mb-3">
                 <div class="col-span-6">
                   <label
-                    for="street-address"
+                    for="umdns_code"
                     class="block text-sm font-medium text-gray-700"
                     >UMDNS Code</label
                   >
                   <input
                     type="number"
-                    name="street-address"
-                    id="street-address"
-                    autocomplete="street-address"
+                    name="umdns_code"
+                    id="umdns_code"
+                    autocomplete="umdns_code"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                     placeholder="UMDNS Code"
                     v-model="umdnsCode"
@@ -87,7 +87,7 @@
 import { ref } from "vue";
 import { useEquipmentDictionaryStore } from "../../../stores/equipmentDictionaryStore";
 
-// Invoke Category Store
+// Invoke Dictionary Store
 const equipmentDictionaryStore = useEquipmentDictionaryStore();
 
 const umdnsCode = ref(0);
@@ -96,13 +96,15 @@ const commonName = ref("");
 
 // Handle Submit
 const onSubmit = () => {
-  equipmentDictionaryStore.addDictionaryList({
+  const data = {
     umdns_code: umdnsCode.value,
     umdns: umdns.value,
     common_name: commonName.value,
-  });
-  (umdnsCode.value = 0), (umdns.value = ""), (commonName.value = "");
+  };
+  (umdnsCode.value = ""), (umdns.value = ""), (commonName.value = "");
+  equipmentDictionaryStore.addDictionaryList(data);
 };
+
 </script>
 
 <style lang="scss" scoped></style>
