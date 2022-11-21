@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-import MaintenanceForm from './MaintenanceForm.vue';
+import MaintenanceForm from '../../pages/maintenance/MaintenanceForm.vue';
 </script>
 
 <style lang="scss" scoped></style>

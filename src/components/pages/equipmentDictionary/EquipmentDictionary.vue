@@ -6,15 +6,15 @@
   <EquipmentDictionaryForm />
   <div class="relative mx-auto mt-8">
     <div>
-      <EquipmentDictionaryCard />
+      <EquipmentDataTable />
     </div>
   </div>
 </template>
 
 <script setup>
-import EquipmentDictionaryCard from "./EquipmentDictionaryCard.vue";
 import EquipmentDictionaryForm from "./EquipmentDictionaryForm.vue";
 import LayoutHeader from "../../layout/Layout-Header.vue";
+import EquipmentDataTable from "../../layout/global/EquipmentDataTable.vue"
 </script>
 
 <style lang="scss" scoped></style>

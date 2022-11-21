@@ -42,9 +42,9 @@ import { usePageUpdateStore } from "../../../stores/pageUpdate";
 import LayoutHeader from "../../layout/Layout-Header.vue";
 import LayoutRightSidenav from "../../layout/Layout-RightSidenav.vue";
 import PageDialog from "../PageDialog.vue";
-import DataTable from "./DataTable.vue";
+import DataTable from "../../layout/global/DataTable.vue";
 import SummaryCard from "../../layout/global/SummaryCard.vue";
-import AdvertSection from "./AdvertSection.vue";
+import AdvertSection from "../../layout/global/AdvertSection.vue";
 import MaintenanceForm from "./MaintenanceForm.vue";
 
 const pageStore = usePageUpdateStore();
