@@ -9,6 +9,11 @@ export const useCategoryStore = defineStore("categoryStore", {
   }),
 
   getters: {
+    getCategory(state) {
+      return (categoryId) => {
+        state.categories.find((category) => category.id === categoryId);
+      };
+    },
     getCategories(state) {
       return state.categories;
     },
@@ -31,11 +36,11 @@ export const useCategoryStore = defineStore("categoryStore", {
         console.log(error.message);
       }
     },
-    async deleteCategory(id) {
+    async deleteCategory(categoryId) {
       try {
-        await axios.delete(api_url + `/${id}`);
-        this.categories = this.categories.filter((c) => {
-          return c.id !== id;
+        await axios.delete(api_url + `/${categoryId}`);
+        this.categories = this.categories.filter((category) => {
+          return category.id !== categoryId;
         });
       } catch (error) {
         console.log(error.message);
